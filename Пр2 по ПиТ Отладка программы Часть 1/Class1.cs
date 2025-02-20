@@ -2,6 +2,11 @@
 
 class ArrayExample
 {
+    static void SendMessage(string name, int msg)
+    {
+        Console.WriteLine("Hello, " + name + "! Count to " + msg);
+    }
+
     static void Main()
     {
         char[] letters = { 'f', 'r', 'e', 'd', ' ', 's', 'm', 'i', 't', 'h' };
@@ -14,10 +19,5 @@ class ArrayExample
             SendMessage(name, a[i]);
         }
         Console.ReadKey();
-    }
-
-    static void SendMessage(string name, int msg)
-    {
-        Console.WriteLine("Hello, " + name + "! Count to " + msg);
     }
 }

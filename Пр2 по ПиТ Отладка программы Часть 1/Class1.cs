@@ -14,7 +14,7 @@ namespace Пр2_по_ПиТ_Отладка_программы_Часть_1
             int n2 = 1;
             int sum;
 
-            for (int i = 2; i < n; i++)
+            for (int i = 2; i <= n; i++)
             {
                 sum = n1 + n2;
                 n1 = n2;
@@ -26,7 +26,7 @@ namespace Пр2_по_ПиТ_Отладка_программы_Часть_1
 
         static void Main(string[] args)
         {
-            int result = Fibonacci(8);
+            int result = Fibonacci(5);
             Console.WriteLine(result);
         }
     }

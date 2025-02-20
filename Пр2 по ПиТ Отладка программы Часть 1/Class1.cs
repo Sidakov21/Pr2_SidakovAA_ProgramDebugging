@@ -1,33 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Пр2_по_ПиТ_Отладка_программы_Часть_1
+class ArrayExample
 {
-    internal class Class1
+    static void SendMessage(string name, int msg)
     {
-        static int Fibonacci(int n)
+        Console.WriteLine("Hello, " + name + "! Count to " + msg);
+    }
+
+    static void Main()
+    {
+        char[] letters = { 'f', 'r', 'e', 'd', ' ', 's', 'm', 'i', 't', 'h' };
+        string name = "";
+        int[] a = new int[10];
+        for (int i = 0; i < letters.Length; i++)
         {
-            int n1 = 0;
-            int n2 = 1;
-            int sum;
-
-            for (int i = 2; i <= n; i++)
-            {
-                sum = n1 + n2;
-                n1 = n2;
-                n2 = sum;
-            }
-
-            return n == 0 ? n1 : n2;
+            name += letters[i];
+            a[i] = i + 1;
+            SendMessage(name, a[i]);
         }
-
-        static void Main(string[] args)
-        {
-            int result = Fibonacci(5);
-            Console.WriteLine(result);
-        }
+        Console.ReadKey();
     }
 }
